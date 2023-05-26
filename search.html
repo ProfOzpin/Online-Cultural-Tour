@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <link href = "./images/stylesheet.css" rel = "stylesheet" type = "text/css" />
+    <head>
+
+        <style>
+            body, html {
+                margin: 0;
+                height: 100%;
+            }
+
+            @font-face {
+                font-family: Spoof-Bold;
+                src: url("images/Spoof-Bold.ttf")
+            }
+
+            .whole_page { 
+                /* The image used */
+                background-position: center;
+                /* Full height */
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-size: 100vw 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 0; 
+            }
+
+            .title {
+                text-align: center;
+                position: relative;
+                top: 20%;
+                width: 100%;
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                position:absolute;
+                font-size: 0;
+            }
+
+            .filter_section{
+                position:relative;
+                margin-top: 10px;
+                margin-left: 20px;
+                margin-right: 10px;
+                font-family: Spoof-Bold;
+            }
+
+            .filter_section h2,h3 {
+                color: white;
+                font-size: 30px;
+            }
+
+            .filter_section h2{
+                margin: 0 auto;
+                display: table;
+                margin-top: 20px;
+            }
+            .filter_section label {
+                color: white;
+                font-size: 20px;
+                margin-left: 5px;
+            }
+
+            .image-container {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                font-family: Spoof-Bold;
+                top: 5%;
+                font-size: 15px;
+                position: absolute;
+            }
+
+            .button-container {
+                width: 80%;
+                font-family: Spoof-Bold;
+                top: 10%;
+                left: 10%;
+                font-size: 10px;
+                background-color: #D1DADE;
+                position: absolute;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 25px;
+
+            }
+
+            .button-container-subtitle {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                font-family: Spoof-Bold;
+                top: 26%;
+                font-size: 15px;
+                position: absolute;
+                color: black;
+            }
+
+            .button {
+                border: none;
+                text-align: left;
+                margin-left: 10px;
+                text-decoration: none;
+                font-size: 25px;
+                height:10%;
+                vertical-align: middle;
+                display: inline-block;
+                background-color: #D1DADE;
+                font-family: Spoof-Bold;
+                color: black;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 25px;
+            }
+
+            .right_side{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                height: 100%;
+                background:rgba(2, 20, 19, 0.829)
+            }
+
+            .frame{
+                width: 100%;
+                height: 100%;
+            }
+
+            
+            .sidebar_left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                height: 100%;
+                background:rgba(1, 10, 8, 0.829)
+            }
+
+            .result_box{
+                align-items: center;
+                text-align: center;
+                width: 80%;
+                height: 60%;
+                font-family: Spoof-Bold;
+                font-size: 15px;
+                position: absolute;
+                background-color: #D1DADE;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 25px;
+                top: 25%;
+                left: 10%;
+                overflow-y: scroll;
+                
+            }
+
+            .result_box::-webkit-scrollbar{
+            display : none; 
+            }
+
+            .button_result {
+                border: none;
+                
+                text-align: left;
+                text-decoration: none;
+                font-size: 25px;
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+                display: inline-block;
+                font-family: Spoof-Bold;
+                color: black;
+            }
+
+
+            .hide {
+                display: none;
+            }
+
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="whole_page">
+            <div class="right_side">
+                <div class="button-container">
+                    <div class="button"><img src="./images/search.png" style="width: 80px; height: 80px;"></div>
+                    <input id="search" placeholder="Search..." style="height: 100%; width: 80%;" class="button"></input>
+                </div>
+                <div class="result_box">
+                    <div container class="button_result">
+                        <template template style="margin-left: 10px;">
+                            <div>
+                                <div title id="title" style="margin-left: 10px; margin-top: 5px;cursor: pointer;">Loading</div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <iframe class="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127576.85527137546!2d102.18129171220997!3d2.2373772717919405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1ee278e8c65dd%3A0x32a7281769e016a!2sMalacca%2C%20Malaysia!5e0!3m2!1sen!2sae!4v1661842862412!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="sidebar_left">
+                <div class = filter_section>
+                    <div style="display:flex; align-items:center;">  
+                        <img src="./images/home_one.png" style="width: 80px; height: 80px; cursor: pointer;" onclick="window.location.href = './Main_Page.html'">
+                        <div style="text-align:center; margin-left:20px;">
+                            <h3 style="margin:0; ">Home</h3>
+                        </div>
+                    </div>
+                    <h2 style="margin-top:20px;">Filter Search Results</h2>
+                    <hr>
+                    <div>
+                        <h3>Category</h3>
+                        <input type="checkbox" id="category1" name="category" value="category1">
+                        <label for="category1">Start The Tour</label><br>
+                        <input type="checkbox" id="category2" name="category" value="category2">
+                        <label for="category2">Take Me Anywhere</label><br>
+                        <input type="checkbox" id="category3" name="category" value="category3">
+                        <label for="category3">Social Media</label><br>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+    </body>
+    <script src="find.js" defer></script>
+    <script>
+        
+    </script>
+</html>
+

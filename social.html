@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <link href = "./images/stylesheet.css" rel = "stylesheet" type = "text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <head>
+
+        <style>
+            body, html {
+                margin: 0;
+                height: 100%;
+            }
+
+            @font-face {
+                font-family: Spoof-Bold;
+                src: url("images/Spoof-Bold.ttf")
+            }
+
+            .intro { 
+                /* The image used */
+                
+
+                background-position: center;
+                /* Full height */
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-size: 100vw 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 0; 
+
+            }
+
+            .title {
+                text-align: center;
+                position: relative;
+                top: 20%;
+                width: 100%;
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                position:absolute;
+                font-size: 0;
+                
+            }
+
+            
+
+            .title h1{
+                line-height: 120%;
+                font-family: Spoof-Bold;
+                font-size: 60px;
+                font-style: bold;
+                margin-bottom: 0px;
+                color: white;
+            }
+
+
+            .image-container {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                font-family: Spoof-Bold;
+                top: 5%;
+                font-size: 15px;
+                position: absolute;
+            }
+
+            .button-container {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                font-family: Spoof-Bold;
+                top: 45%;
+                font-size: 15px;
+                position: absolute;
+            }
+
+
+            .button-container-subtitle {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                font-family: Spoof-Bold;
+                top: 26%;
+                font-size: 15px;
+                position: absolute;
+            }
+
+            .button {
+                border: none;
+                text-align: center;
+                text-decoration: none;
+                font-size: 25px;
+                width: 400px;
+                height: 90px;
+                vertical-align: middle;
+                line-height: 90px; /* same as height! */
+                margin-left: 100px;
+                margin-right: 100px; 
+                display: inline-block;
+                background-color: white;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 25px;
+                font-family: Spoof-Bold;
+            }
+
+            .button-subtitle {
+                top: 50%;
+                border: none;
+                padding: 20px 65px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 25px;
+                font-family: Spoof-Bold;
+                color: white;
+            }
+
+            .frame{
+                width: 100%;
+                height: 100%;
+            }
+            .bar{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                font-size: 20px;
+                height: 100%;
+                left: 70%;
+                background-color: #021413d3;
+                overflow-y : scroll;
+            }
+
+            .bar::-webkit-scrollbar{
+            display : none; 
+            }
+
+            .bar_image{
+                text-align: center;
+                
+            }
+
+            .bar_controls{
+                top: 95%; 
+                background-color: rgb(43, 71, 66); 
+                left: 70%; 
+                width: 30%; 
+                height: 50px; 
+                position: fixed;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_content{
+                position:absolute;
+                top: 5%;
+                margin-left: 45px;
+                margin-bottom: 5px;
+                width: 90%;
+                overflow-y: scroll;       
+            }
+
+            .bar_content::-webkit-scrollbar{
+            display : none; 
+            }
+
+            .bar_subtitle{
+                font-size: 16px;
+                color: #f5aa41;
+                margin-bottom: 5px;
+            }
+            
+            .bar_title{
+                font-size: 40px;
+                color: white;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .bar_text{
+                font-size: 16px;
+                color: white;
+                margin-bottom: 5px;
+                font-family: "Roboto";
+                margin-right: 45px;
+                white-space: pre-line;
+            }
+
+            .button_container{
+                left: 66%;
+                position: absolute;
+                width: 40px;
+                cursor: pointer;
+            }
+            @media screen and (max-width: 1000px) {
+                .bar {
+                    overflow: auto;
+                    position: absolute;
+                    width: 70%;
+                    font-size: 20px;
+                    top: 43%;
+                    height: 50%;
+                    left: 30%;
+                    background-color: rgba(43, 71, 66, 0.8);
+                }
+                .bar_controls {
+                    top: 93%;
+                    background-color: rgb(43, 71, 66);
+                    left: 30%;
+                    width: 70%;
+                    height: 40%;
+
+                }
+                .button_container {
+                    left: 20%;
+                    bottom: 0%;
+                    position: absolute;
+                    width: 40px;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="intro">
+            <div class="button_container">
+                <img src="./images/search_two.png" width="50px;" onclick="window.location.href = './search.html'">
+                <img src="./images/home_two.png" width="50px;" onclick="window.location.href = './Main_Page.html'">
+                <img src="./images/contribute_two.png" width="50px;" onclick="window.location.href = './contribute.php'">
+                <img src="./images/anywhere_two.png" width="50px;" onclick="window.location.href = './anywhere.html'">
+                <img src="./images/start_tour_two.png" width="50px;" onclick="window.location.href = './starttour.html'">
+            </div>
+            <div class="bar">
+                <div class="bar_content" id="script_holder">
+                    <div class="social_container">
+                        <img id="select_tiktok" src="./images/work3.png" width="60px;" style="cursor: pointer;">
+                        <img id="select_instagram" src="./images/work.png" width="60px;"style="cursor: pointer;">
+                    </div>
+                    <br>
+                    <div id="title" class="bar_title">Loading</div>
+                    <br>
+                    <div id="social_handle" class='sk-ww-tiktok-hashtag-feed' data-embed-id='' style="visibility: hidden;"></div>
+                </div>
+            </div>
+            <iframe id="frame" class="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1936.6983640990927!2d102.2368892408385!3d2.1931377700664627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1f1c21fa064bb%3A0xb131cd30fef7eb80!2sDonald%20%26%20Lily%20Nyonya%20Restoran!5e0!3m2!1sen!2sae!4v1662067756897!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="bar_controls">
+                <div style="width: 80px;cursor: pointer;height: 40px;background-color: black ;line-height: 35px;font-size: 15px;color: #f5aa41;display: inline-block; margin-right: 10px;"id="back">&lt;&lt; BACK&ThinSpace;</div>
+                <div style="width: 80px;cursor: pointer;height: 40px;background-color: black;line-height: 35px;font-size: 15px;color: #f5aa41;display: inline-block;"id="next">&ThinSpace;&ThinSpace;&ThinSpace;&ThinSpace;NEXT&gt;&gt;</div>
+        </div>      
+  
+    </body>
+    <script src="social.js" defer></script>
+    <script>
+    </script>
+</html>
